@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 app.secret_key = "shrikant"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:einstein1729@127.0.0.1:5432/result_server'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:********@127.0.0.1:5432/result_server'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # export mysql+pymysql://root:einstein1729@127.0.0.1:3306/result_server = postgres
 # mysqldump -h<host> --compatible=postgresql -u<user> -p <database_name> > /tmp/my_dump.sql
@@ -32,7 +32,7 @@ login_manager.needs_refresh_message_category = "info"
 app.config["MAIL_SERVER"] = 'smtp.gmail.com'
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USERNAME"] = 'pandhareshrikant99@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Shrikant@1999'
+app.config['MAIL_PASSWORD'] = '*******'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
