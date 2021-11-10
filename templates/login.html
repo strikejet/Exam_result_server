@@ -1,0 +1,28 @@
+<html lang="en-US">
+<head><title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+{% for message in get_flashed_messages() %}
+      <h1>{{ message }}</h1>
+      {% endfor %}
+
+    <h1>LOGIN</h1>
+    <p>Fill the details to login and get result</p>
+
+<body>
+
+    <form action = "/login" method = "POST">
+    <label for="student_id"><b>Student ID</b></label>
+    <input type="text" placeholder="Enter Student Id." name="student_id" id="student_id" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="text" placeholder="Enter Password" name="password" id="password" required>
+        <button type="submit">Login</button>
+</form>
+
+    </body>
+
+
+</html>

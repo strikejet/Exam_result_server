@@ -1,0 +1,20 @@
+<html lang="en-US">
+<head><title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+{% for message in get_flashed_messages() %}
+      <h1>{{ message }}</h1>
+      {% endfor %}
+<h1>OTP</h1>
+    <p>FIll the OTP sent to your registered email id</p>
+
+<body>
+
+    <form action = "/otp" method = "POST">
+
+    <label for="otp"><b>OTP</b></label>
+    <input type="text" placeholder="Enter OTP." name="otp" id="otp" required>
+        <button type="submit">Login</button></form>
+</body>
+</html>

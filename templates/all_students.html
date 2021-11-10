@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+
+
+<table border = "1" cellpadding="5" cellspacing="5">
+    <tr>
+    <th>name</th><th>gender</th><th>student_id</th><th>email</th><th>role</th>
+    </tr>
+     {% for student in StudentInfo.query.all() %}
+    <tr>
+        <td>{{(student.name)}}</td>
+        <td>{{(student.gender)}}</td>
+        <td>{{(student.student_id)}}</td>
+        <td>{{(student.email)}}</td>
+        <td>{{(student.role)}}</td>
+    </tr>
+
+{% endfor %}
+</table>
+</body>
+</html>

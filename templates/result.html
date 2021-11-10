@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Result</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<h1>Fynd Entrance Examination</h1>
+    <p>Result</p>
+
+<body>
+<div>
+
+    <table border = "1" cellpadding="5" cellspacing="5">
+
+    <tr><td>NAME</td><td>{{(current_user.name)}}</td></tr>
+    <tr><td>GENDER</td><td>{{(current_user.gender)}}</td></tr>
+    <tr><td>STUDENT ID</td><td>{{(current_user.student_id)}}</td></tr>
+    <tr><td>E-MAIL</td><td>{{(current_user.email)}}</td></tr>
+    <tr><td>ROLE</td><td>{{(current_user.role)}}</td></tr>
+    {% for marks in current_user.marks%}
+    <tr><td>APTITUDE</td><td>{{marks.aptitude}}</td></tr>
+    <tr><td>MATHEMATICS</td><td>{{(marks.mathematics)}}</td></tr>
+    <tr><td>VERBAL</td><td>{{(marks.verbal)}}</td></tr>
+    <tr><td>CODING</td><td>{{(marks.coding)}}</td></tr>
+    {% endfor %}
+
+    </table>
+</div>
+<div> <form action = "/logout" method = "POST">
+        <button type="submit">Logout</button> </form>
+</div>
+<p>To send your result to the registered email address : </p>
+        <form action = "/send_result" method = "POST">
+        <button type="submit">Send mail and logout</button>
+        </form>
+
+
+</body>
+</html>
